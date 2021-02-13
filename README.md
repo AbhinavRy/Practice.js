@@ -1,7 +1,7 @@
 # Practice.js
 "VO E-COMMERCE JAISA KUCH"
 
-### Identification of Probleem
+### Identification of Problem
 MSMEs in India plays an indispensable role in the economic development of the nation through 
 contribution to the manufacturing output, increasing foreign exchange earnings, provision of 
 employment opportunities, exports, and promoting balanced economic development India has 
