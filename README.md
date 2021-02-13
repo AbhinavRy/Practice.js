@@ -39,5 +39,4 @@ easily access our portal Unique billing system in our portal will allow seller t
 no need to keeping records for sale purchase it. 
 Through our portal the MSME sector can also purchase raw material. As in our portal anyone can 
 register and sell their products. 
-
 At last, we are using chat bot for better user experience.
