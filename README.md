@@ -8,7 +8,7 @@ employment opportunities, exports, and promoting balanced economic development I
 about 36 million MSMEs providing about 80 million employment opportunities, contributing to 
 about 8% of the gross domestic product (GDP) and about 33% of total manufacturing output 
 (Ministry of Micro, Small and Medium Enterprises, 2018). 
-Some of the major challenges faced by MSMEs in the adoption of internet marketing and ecommerce identified from the interviews were: 
+Some of the major challenges faced by MSMEs in the adoption of internet marketing and e-commerce identified from the interviews were: 
 1. Lack of adequate awareness and skills 
 2. Financial constraints and budgetary restrictions
 3. Quality of products or services 
