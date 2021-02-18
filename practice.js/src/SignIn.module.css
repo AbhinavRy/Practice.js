@@ -1,3 +1,8 @@
+body{
+    background-color: #ffffff;
+    background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
 .Container{
     max-width: 400px;
     height: 100vh;
@@ -103,4 +108,8 @@ form div{
     margin: 5px;
     border-radius: 8px;
     width: 100px;
+}
+a{
+    text-decoration: none;
+    color: #000;
 }
