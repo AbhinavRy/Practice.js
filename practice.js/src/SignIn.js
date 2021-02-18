@@ -1,0 +1,51 @@
+import React from 'react'
+import styles from './SignIn.module.css'
+import {Link} from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope, faLock,faCheck ,faStore, faShoppingBasket } from '@fortawesome/free-solid-svg-icons'
+
+function SignIn() {
+    return (
+        <div className={styles.Container}>
+            <h1 className={styles.SignIn}>Sign In</h1>
+            <div className={styles.BoxContainer}>
+                <div className={styles.ChooseBox}>
+                    <FontAwesomeIcon icon={faShoppingBasket} className={styles.ChooseIcon}/>
+                    <p className={styles.ChooseDesc}>Buyer</p>
+                    <input className={`{styles.ChooseCheck} {syles.ChooseCheck1}`} type="radio" name="AccountType" value="ChooseCheck1" id="ChooseCheck1" checked/>
+                    <label htmlFor="ChooseCheck1">
+                        <span>
+                            <FontAwesomeIcon icon={faCheck}/>
+                        </span>
+                    </label>
+                </div>
+                <div className={styles.ChooseBox}>
+                    <FontAwesomeIcon icon={faStore} className={styles.ChooseIcon}/>
+                    <p className={styles.ChooseDesc}>Seller</p>
+                    <input className={`{styles.ChooseCheck} {syles.ChooseCheck2}`} type="radio" name="AccountType" value="ChooseCheck2" id="ChooseCheck2"/>
+                    <label htmlFor="ChooseCheck2">
+                        <span>
+                            <FontAwesomeIcon icon={faCheck}/>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <form>
+                <div className={styles.FormInput}>
+                    <FontAwesomeIcon icon={faEnvelope} className={styles.FormIcon} swapOpacity/>
+                    <input type="email" className={styles.FormInp} placeholder="Enter Email" required/>
+                </div>
+                <div className={styles.FormInput}>
+                    <FontAwesomeIcon icon={faLock} className={styles.FormIcon} swapOpacity/>
+                    <input type="password" className={styles.FormInp} placeholder="Enter Password" required/>
+                </div>
+                <div className={styles.SubmitCont}>
+                    <button className={styles.SigninBtn} type="Submit">Sign In</button>
+                    <p className={styles.Ortxt}>Or <a href="#Id">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+    )
+}
+
+export default SignIn
