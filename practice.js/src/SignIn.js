@@ -1,8 +1,9 @@
 import React from 'react'
 import styles from './SignIn.module.css'
+import Zoom from '@material-ui/core/Zoom'
 import {Link} from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faLock,faCheck ,faStore, faShoppingBasket } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faLock, faCheck, faStore, faShoppingBasket } from '@fortawesome/free-solid-svg-icons'
 
 function SignIn() {
     return (
@@ -40,7 +41,9 @@ function SignIn() {
                     <input type="password" className={styles.FormInp} placeholder="Enter Password" required/>
                 </div>
                 <div className={styles.SubmitCont}>
-                    <button className={styles.SigninBtn} type="Submit">Sign In</button>
+                    <Zoom in={true}>
+                        <button className={styles.SigninBtn} type="Submit">Sign In</button>
+                    </Zoom>
                     <p className={styles.Ortxt}>Or <a href="#Id">Sign Up</a></p>
                 </div>
             </form>
