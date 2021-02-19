@@ -1,5 +1,5 @@
 import React from 'react'
-import ProdInfo from './components/ProductInfo.js'
+import ProdInfo from './buyer_components/ProductInfo.js'
 import productsdata from './productsdata.js'
 
 function createProdPage(productdata){
