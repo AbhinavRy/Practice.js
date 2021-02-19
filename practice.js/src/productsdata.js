@@ -1,0 +1,43 @@
+const productsdata=[
+    {
+        id:1,
+        name: "Product1",
+        imgURL:"",
+        price:"",
+        rating:"",
+        desc:""
+    },
+    {
+        id:2,
+        name:"Product2",
+        imgURL:"",
+        price:"",
+        rating:"",
+        desc:""
+    },
+    {
+        id:3,
+        name:"Product3",
+        imgURL:"",
+        price:"",
+        rating:"",
+        desc:""
+    },
+    {
+        id:4,
+        name:"Product4",
+        imgURL:"",
+        price:"",
+        rating:"",
+        desc:""
+    },
+    {
+        id:5,
+        name:"Product5",
+        imgURL:"",
+        price:"",
+        rating:"",
+        desc:""
+    }
+]
+export default productsdata;

@@ -10,26 +10,30 @@ function SignIn() {
         <div className={styles.Container}>
             <h1 className={styles.SignIn}>Sign In</h1>
             <div className={styles.BoxContainer}>
-                <div className={styles.ChooseBox}>
-                    <FontAwesomeIcon icon={faShoppingBasket} className={styles.ChooseIcon}/>
-                    <p className={styles.ChooseDesc}>Buyer</p>
-                    <input className={`{styles.ChooseCheck} {syles.ChooseCheck1}`} type="radio" name="AccountType" value="ChooseCheck1" id="ChooseCheck1" checked/>
-                    <label htmlFor="ChooseCheck1">
-                        <span>
-                            <FontAwesomeIcon icon={faCheck}/>
-                        </span>
-                    </label>
-                </div>
-                <div className={styles.ChooseBox}>
-                    <FontAwesomeIcon icon={faStore} className={styles.ChooseIcon}/>
-                    <p className={styles.ChooseDesc}>Seller</p>
-                    <input className={`{styles.ChooseCheck} {syles.ChooseCheck2}`} type="radio" name="AccountType" value="ChooseCheck2" id="ChooseCheck2"/>
-                    <label htmlFor="ChooseCheck2">
-                        <span>
-                            <FontAwesomeIcon icon={faCheck}/>
-                        </span>
-                    </label>
-                </div>
+                <Zoom in={true}>
+                    <div className={styles.ChooseBox}>
+                        <FontAwesomeIcon icon={faShoppingBasket} className={styles.ChooseIcon}/>
+                        <p className={styles.ChooseDesc}>Buyer</p>
+                        <input className={`{styles.ChooseCheck} {syles.ChooseCheck1}`} type="radio" name="AccountType" value="ChooseCheck1" id="ChooseCheck1" checked/>
+                        <label htmlFor="ChooseCheck1">
+                            <span>
+                                <FontAwesomeIcon icon={faCheck}/>
+                            </span>
+                        </label>
+                    </div>
+                </Zoom>
+                <Zoom in={true}>
+                    <div className={styles.ChooseBox}>
+                        <FontAwesomeIcon icon={faStore} className={styles.ChooseIcon}/>
+                        <p className={styles.ChooseDesc}>Seller</p>
+                        <input className={`{styles.ChooseCheck} {syles.ChooseCheck2}`} type="radio" name="AccountType" value="ChooseCheck2" id="ChooseCheck2"/>
+                        <label htmlFor="ChooseCheck2">
+                            <span>
+                                <FontAwesomeIcon icon={faCheck}/>
+                            </span>
+                        </label>
+                    </div>
+                </Zoom>
             </div>
             <form>
                 <div className={styles.FormInput}>
