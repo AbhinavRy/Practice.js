@@ -118,7 +118,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function PrimarySearchAppBar() {
+export default function PrimarySearchAppBar(props) {
   const menuList = ['Home', 'Profile', 'Cart', 'Notifications', 'Settings']
   const classes = useStyles();
   const theme = useTheme();
@@ -187,8 +187,6 @@ export default function PrimarySearchAppBar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      {props.isSeller?"":
-      <div>
       <MenuItem>
         <IconButton aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={4} color="secondary">
@@ -212,7 +210,7 @@ export default function PrimarySearchAppBar() {
           </Badge>
         </IconButton>
         <p>Notifications</p>
-      </MenuItem></div>}
+      </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           aria-label="account of current user"
@@ -243,7 +241,6 @@ export default function PrimarySearchAppBar() {
           <Typography className={classes.title} variant="h6" noWrap>
             Material-UI
           </Typography>
-          {props.isSeller?"":
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
@@ -256,11 +253,9 @@ export default function PrimarySearchAppBar() {
               }}
               inputProps={{ 'aria-label': 'search' }}
             />
-          </div>}
+          </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-          {props.isSeller?"":
-          <div>
             <IconButton aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={4} color="secondary">
                 <MailIcon />
@@ -271,7 +266,6 @@ export default function PrimarySearchAppBar() {
                 <NotificationsIcon />
               </Badge>
             </IconButton>
-            </div>}
             <IconButton
               edge="end"
               aria-label="account of current user"
