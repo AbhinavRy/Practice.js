@@ -15,8 +15,9 @@ function Routes() {
             <Route exact path="/buyerhome" component={BuyerHome}/>
             <Route exact path="/productpage" component={ProductPage}/>
             <Route exact path="/signin" component={SignIn}/>
-            <Route exact path="/signup" component={Signup}>
-            </Route>
+            <Route exact path="/signup" component={Signup}/>
+            <Route exact path="/seller/edit" component={EditPage}/>
+            <Route exact path="/seller/add" component={AddProduct}/>
             <Route path="*" component={ErrorPage} />
         </Switch>
     )
