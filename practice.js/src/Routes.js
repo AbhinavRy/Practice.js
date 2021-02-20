@@ -5,15 +5,20 @@ import SignIn from './SignIn'
 import Signup from './Signup'
 import Product from './ProductSearch'
 import BuyerHome from './BuyerHome'
+import SellerHome from './SellerHome'
+import EditPage from './Seller_Components/EditPage'
+import AddProduct from './Seller_Components/AddProduct'
 
 function Routes() {
     return(
         <Switch>
             <Route exact path="/product" component={Product}/>
             <Route exact path="/buyerhome" component={BuyerHome}/>
+            <Route exact path="/seller" component={SellerHome}/>
             <Route exact path="/signin" component={SignIn}/>
-            <Route exact path="/signup" component={Signup}>
-            </Route>
+            <Route exact path="/signup" component={Signup}/>
+            <Route exact path="/seller/edit" component={EditPage}/>
+            <Route exact path="/seller/add" component={AddProduct}/>
             <Route path="*" component={ErrorPage} />
         </Switch>
     )
