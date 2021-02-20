@@ -6,6 +6,8 @@ import Signup from './Signup'
 import ProductSearch from './ProductSearch'
 import BuyerHome from './BuyerHome'
 import ProductPage from './ProductPage'
+import EditPage from './Seller_Components/EditPage'
+import AddProduct from './Seller_Components/AddProduct'
 
 
 function Routes() {
