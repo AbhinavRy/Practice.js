@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 import { fade, makeStyles, useTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -130,9 +131,14 @@ export default function PrimarySearchAppBar(props) {
     <div>
       <List>
         {menuList.map((text, index) => (
+          <div>{text === 'Cart' ?
+          <Link to='/cart'>
           <ListItem button key={text}>
             <ListItemText primary={text} />
-          </ListItem>
+          </ListItem></Link>
+          : <ListItem button key={text}>
+          <ListItemText primary={text} />
+        </ListItem>}</div>
         ))}
       </List>
     </div>
@@ -187,14 +193,15 @@ export default function PrimarySearchAppBar(props) {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem>
+      <Link to='cart'>
+        <MenuItem>
         <IconButton aria-label="show new mails" color="inherit">
           <Badge badgeContent={4} color="secondary">
             <ShoppingCartIcon />
           </Badge>
         </IconButton>
         <p>Cart</p>
-      </MenuItem>
+      </MenuItem></Link>
       <MenuItem>
         <IconButton aria-label="show items" color="inherit">
           <Badge badgeContent={4} color="secondary">
@@ -241,6 +248,7 @@ export default function PrimarySearchAppBar(props) {
           <Typography className={classes.title} variant="h6" noWrap>
             Material-UI
           </Typography>
+          <Link to='product'>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
@@ -253,7 +261,7 @@ export default function PrimarySearchAppBar(props) {
               }}
               inputProps={{ 'aria-label': 'search' }}
             />
-          </div>
+          </div></Link>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <IconButton aria-label="show 4 new mails" color="inherit">

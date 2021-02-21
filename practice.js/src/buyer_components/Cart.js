@@ -9,6 +9,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import productsdata from '../productsdata';
 import PrimarySearchAppBar from './PrimaryHeader';
+import {Link} from 'react-router-dom'
 
 const useStyles = makeStyles({
   root: {
@@ -43,9 +44,10 @@ export default function Cart() {
                 </CardContent>
             </CardActionArea>
             <CardActions>
+              <Link to='paymentpage'>
                 <Button size="small" color="primary">
                 Buy Now
-                </Button>
+                </Button></Link>
                 <Button size="small" color="primary">
                 Delete from Cart
                 </Button>
