@@ -8,6 +8,7 @@ const productsdata=[
         price:"Rs.15,999/-",
         rating:"4.5",
         store:"GG Shop",
+        storeLocation:"RZ-232, H-Block, Lajapt Nagar, Delhi",
         desc:"Good Stuff"
     },
     {

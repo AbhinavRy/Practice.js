@@ -2,8 +2,8 @@ import { faBorderNone } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import SearchAppBar from './buyer_components/SecondaryHeader';
 import productsdata from './productsdata';
-import Carousel from 'react-material-ui-carousel'
-import {Paper} from '@material-ui/core'
+import Carousel from 'react-material-ui-carousel';
+import {Paper} from '@material-ui/core';
 
 export default function ProductPage(props){
     return(
@@ -18,6 +18,7 @@ export default function ProductPage(props){
             <h2>{productsdata[0].price}</h2>
             <h3>Store:{productsdata[0].store}</h3>
             <p>Store's Location:</p>
+            <p>{productsdata[0].storeLocation}</p>
             <h4>Description:</h4>
             <p>{productsdata[0].desc}</p>
         </div>

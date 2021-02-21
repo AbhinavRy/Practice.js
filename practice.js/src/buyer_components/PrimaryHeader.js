@@ -119,7 +119,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function PrimarySearchAppBar(props) {
-  const menuList = ['Home', 'Profile', 'Cart', 'Notifications', 'Settings']
+  const menuList = ['Home', 'Profile', 'Cart', 'Your Orders', 'Notifications', 'Settings']
   const classes = useStyles();
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -188,7 +188,7 @@ export default function PrimarySearchAppBar(props) {
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
-        <IconButton aria-label="show 4 new mails" color="inherit">
+        <IconButton aria-label="show new mails" color="inherit">
           <Badge badgeContent={4} color="secondary">
             <ShoppingCartIcon />
           </Badge>
@@ -196,7 +196,7 @@ export default function PrimarySearchAppBar(props) {
         <p>Cart</p>
       </MenuItem>
       <MenuItem>
-        <IconButton aria-label="show 4 items" color="inherit">
+        <IconButton aria-label="show items" color="inherit">
           <Badge badgeContent={4} color="secondary">
             <MailIcon />
           </Badge>
@@ -204,7 +204,7 @@ export default function PrimarySearchAppBar(props) {
         <p>Messages</p>
       </MenuItem>
       <MenuItem>
-        <IconButton aria-label="show 11 new notifications" color="inherit">
+        <IconButton aria-label="show new notifications" color="inherit">
           <Badge badgeContent={11} color="secondary">
             <NotificationsIcon />
           </Badge>
