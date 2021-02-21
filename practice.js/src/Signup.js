@@ -3,6 +3,7 @@ import styles from './Signup.module.css'
 import Map from './MapContain'
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
+import {Link} from 'react-router-dom'
 
 function BuyerSignup() {
     const [isBuyer, setIsBuyer] = useState(false)
@@ -58,7 +59,7 @@ function BuyerSignup() {
             <Map />
             <div className={styles.SubmitCont}>
                 <button className={styles.SigninBtn} type="Submit">Sign Up</button>
-                <p className={styles.Ortxt}>Or <a href="#Id">Sign In</a></p>
+                <p className={styles.Ortxt}>Or <Link to='/'>Sign In</Link></p>
             </div>
         </form>
 

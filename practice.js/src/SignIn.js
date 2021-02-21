@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faLock, faCheck, faStore, faShoppingBasket } from '@fortawesome/free-solid-svg-icons'
 import { useHistory } from 'react-router'
 import {useState} from 'react'
+import {Link} from 'react-router-dom'
 
 
 function SignIn() {
@@ -59,7 +60,7 @@ function SignIn() {
                     <Zoom in={true}>
                         <button className={styles.SigninBtn} type="Submit" onClick={handleLogin}>Sign In</button>
                     </Zoom>
-                    <p className={styles.Ortxt}>Or <a href="#Id">Sign Up</a></p>
+                    <p className={styles.Ortxt}>Or <Link to='signup'>Sign Up</Link></p>
                 </div>
             </form>
         </div>
