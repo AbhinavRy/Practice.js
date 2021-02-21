@@ -1,4 +1,3 @@
-import { faBorderNone } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import SearchAppBar from './buyer_components/SecondaryHeader';
 import productsdata from './productsdata';
