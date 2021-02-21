@@ -1,5 +1,5 @@
 import React from 'react';
-import { fade, makeStyles } from '@material-ui/core/styles';
+import { fade, makeStyles, useTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -14,8 +14,47 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import Hidden from '@material-ui/core/Hidden';
+import Drawer from '@material-ui/core/Drawer';
+import CloseIcon from '@material-ui/icons/Close';
+
+const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+  },
+  drawer: {
+    [theme.breakpoints.up('sm')]: {
+      width: drawerWidth,
+      flexShrink: 0,
+    },
+  },
+  appBar: {
+    zIndex: theme.zIndex.drawer + 1,
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+    [theme.breakpoints.up('sm')]: {
+      display: 'none',
+    },
+  },
+  toolbar: theme.mixins.toolbar,
+  drawerPaper: {
+    width: drawerWidth
+  },
+  content: {
+    flexGrow: 1,
+    padding: theme.spacing(3),
+  },
+  closeMenuButton: {
+    marginRight: 'auto',
+    marginLeft: 0,
+  },
   grow: {
     flexGrow: 1,
   },
@@ -80,7 +119,24 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function PrimarySearchAppBar(props) {
+  const menuList = ['Home', 'Profile', 'Cart', 'Notifications', 'Settings']
   const classes = useStyles();
+  const theme = useTheme();
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+  function handleDrawerToggle() {
+    setMobileOpen(!mobileOpen)
+  }
+  const drawer = (
+    <div>
+      <List>
+        {menuList.map((text, index) => (
+          <ListItem button key={text}>
+            <ListItemText primary={text} />
+          </ListItem>
+        ))}
+      </List>
+    </div>
+  );
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -131,10 +187,16 @@ export default function PrimarySearchAppBar(props) {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      {props.isSeller?"":
-      <div>
       <MenuItem>
         <IconButton aria-label="show 4 new mails" color="inherit">
+          <Badge badgeContent={4} color="secondary">
+            <ShoppingCartIcon />
+          </Badge>
+        </IconButton>
+        <p>Cart</p>
+      </MenuItem>
+      <MenuItem>
+        <IconButton aria-label="show 4 items" color="inherit">
           <Badge badgeContent={4} color="secondary">
             <MailIcon />
           </Badge>
@@ -148,7 +210,7 @@ export default function PrimarySearchAppBar(props) {
           </Badge>
         </IconButton>
         <p>Notifications</p>
-      </MenuItem></div>}
+      </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           aria-label="account of current user"
@@ -171,6 +233,7 @@ export default function PrimarySearchAppBar(props) {
             edge="start"
             className={classes.menuButton}
             color="inherit"
+            onClick={handleDrawerToggle}
             aria-label="open drawer"
           >
             <MenuIcon />
@@ -178,7 +241,6 @@ export default function PrimarySearchAppBar(props) {
           <Typography className={classes.title} variant="h6" noWrap>
             Material-UI
           </Typography>
-          {props.isSeller?"":
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
@@ -191,11 +253,9 @@ export default function PrimarySearchAppBar(props) {
               }}
               inputProps={{ 'aria-label': 'search' }}
             />
-          </div>}
+          </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-          {props.isSeller?"":
-          <div>
             <IconButton aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={4} color="secondary">
                 <MailIcon />
@@ -206,7 +266,6 @@ export default function PrimarySearchAppBar(props) {
                 <NotificationsIcon />
               </Badge>
             </IconButton>
-            </div>}
             <IconButton
               edge="end"
               aria-label="account of current user"
@@ -231,6 +290,40 @@ export default function PrimarySearchAppBar(props) {
           </div>
         </Toolbar>
       </AppBar>
+      <nav className={classes.drawer}>
+        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+        <Hidden smUp implementation="css">
+          <Drawer
+            variant="temporary"
+            anchor={theme.direction === 'rtl' ? 'right' : 'left'}
+            open={mobileOpen}
+            onClose={handleDrawerToggle}
+            classes={{
+              paper: classes.drawerPaper,
+            }}
+            ModalProps={{
+              keepMounted: true, // Better open performance on mobile.
+            }}
+          >
+            <IconButton onClick={handleDrawerToggle} className={classes.closeMenuButton}>
+              <CloseIcon/>
+            </IconButton>
+            {drawer}
+          </Drawer>
+        </Hidden>
+        <Hidden xsDown implementation="css">
+          <Drawer
+            className={classes.drawer}
+            variant="permanent"
+            classes={{
+              paper: classes.drawerPaper,
+            }}
+          >
+            <div className={classes.toolbar} />
+            {drawer}
+          </Drawer>  
+        </Hidden>
+      </nav>
       {renderMobileMenu}
       {renderMenu}
     </div>

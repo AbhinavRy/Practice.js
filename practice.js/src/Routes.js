@@ -3,18 +3,19 @@ import {Route, Switch} from 'react-router-dom'
 import ErrorPage from './ErrorPage'
 import SignIn from './SignIn'
 import Signup from './Signup'
-import Product from './ProductSearch'
+import ProductSearch from './ProductSearch'
 import BuyerHome from './BuyerHome'
-import SellerHome from './SellerHome'
+import ProductPage from './ProductPage'
 import EditPage from './Seller_Components/EditPage'
 import AddProduct from './Seller_Components/AddProduct'
+
 
 function Routes() {
     return(
         <Switch>
-            <Route exact path="/product" component={Product}/>
+            <Route exact path="/product" component={ProductSearch}/>
             <Route exact path="/buyerhome" component={BuyerHome}/>
-            <Route exact path="/seller" component={SellerHome}/>
+            <Route exact path="/productpage" component={ProductPage}/>
             <Route exact path="/signin" component={SignIn}/>
             <Route exact path="/signup" component={Signup}/>
             <Route exact path="/seller/edit" component={EditPage}/>

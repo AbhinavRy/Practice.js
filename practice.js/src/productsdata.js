@@ -1,11 +1,14 @@
 const productsdata=[
     {
         id:1,
-        name: "Product1",
-        imgURL:"",
-        price:"",
-        rating:"",
-        desc:""
+        name: "Samsung Galaxy M31",
+        imgURL:["https://static.digit.in/default/418cc90461c44bb580374d58e82ea9d48b59b88d.jpeg?tr=1200",
+        "https://images-na.ssl-images-amazon.com/images/I/616L0Fi0omL._SY355_.jpg"
+        ],
+        price:"Rs.15,999/-",
+        rating:"4.5",
+        store:"GG Shop",
+        desc:"Good Stuff"
     },
     {
         id:2,
@@ -13,6 +16,7 @@ const productsdata=[
         imgURL:"",
         price:"",
         rating:"",
+        store:"",
         desc:""
     },
     {
@@ -21,6 +25,7 @@ const productsdata=[
         imgURL:"",
         price:"",
         rating:"",
+        store:"",
         desc:""
     },
     {
@@ -29,6 +34,7 @@ const productsdata=[
         imgURL:"",
         price:"",
         rating:"",
+        store:"",
         desc:""
     },
     {
@@ -37,6 +43,7 @@ const productsdata=[
         imgURL:"",
         price:"",
         rating:"",
+        store:"",
         desc:""
     }
 ]

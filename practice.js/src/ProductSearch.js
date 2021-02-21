@@ -4,9 +4,16 @@ import productsdata from './productsdata.js'
 import SearchAppBar from './buyer_components/SecondaryHeader'
 
 function createProdPage(productdata){
-    return <ProdInfo name={productdata.name}/>;
+    return <ProdInfo 
+        key={productdata.id}
+        name={productdata.name}
+        imgURL={productdata.imgURL}
+        price={productdata.price}
+        rating={productdata.rating}
+        store={productdata.store}
+    />;
 }
-export default function Product(){
+export default function ProductSearch(){
     return(
         <div>
             <SearchAppBar />
