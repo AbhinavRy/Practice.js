@@ -16,7 +16,7 @@ import SearchBar from './buyer_components/SearchBar'
 function Routes() {
     return(
         <Switch>
-            <Route exact path="/signin" component={SignIn}/>
+            <Route exact path="/" component={SignIn}/>
             <Route exact path="/signup" component={Signup}/>
             <Route exact path="/seller" component={SellerHome}/>
             <Route exact path="/seller/edit" component={EditPage}/>
