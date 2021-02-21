@@ -16,10 +16,11 @@ export default function ProductPage(props){
             </Carousel>
             <h2>{productsdata[0].price}</h2>
             <h3>Store:{productsdata[0].store}</h3>
-            <p>Store's Location:</p>
-            <p>{productsdata[0].storeLocation}</p>
             <h4>Description:</h4>
             <p>{productsdata[0].desc}</p>
+            <p>Store's Location:</p>
+            <p>{productsdata[0].storeLocation}</p>
+            <iframe width="425" height="350" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=77.2348925471306%2C28.56976956231617%2C77.23740309476854%2C28.57134074309763&amp;layer=mapnik" style={{border: "1px solid black"}}></iframe><br/><small><a href="https://www.openstreetmap.org/#map=19/28.57056/77.23615">View Larger Map</a></small>
         </div>
     );
 }
