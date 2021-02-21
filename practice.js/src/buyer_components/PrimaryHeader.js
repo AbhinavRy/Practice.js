@@ -248,7 +248,7 @@ export default function PrimarySearchAppBar(props) {
           <Typography className={classes.title} variant="h6" noWrap>
             Material-UI
           </Typography>
-          <Link to='product'>
+          <Link to='SearchBar'>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
