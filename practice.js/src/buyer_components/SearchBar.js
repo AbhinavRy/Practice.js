@@ -1,6 +1,7 @@
 import React from 'react';
 import productsdata from '../productsdata';
 import { ReactSearchAutocomplete } from 'react-search-autocomplete';
+import  { Link, useHistory } from 'react-router-dom';
 
 export default function SearchBar() {
   const handleOnSearch = (string, results) => {
@@ -17,11 +18,19 @@ export default function SearchBar() {
   const handleOnFocus = () => {
     console.log('Focused')
   }
+  let history = useHistory();
 
+  const handleKeyPress = (event) => {
+      if(event.key === 'Enter'){
+        history.push('/product')
+      }
+  }
+
+ 
   return (
     <div className="App">
       <header className="App-header">
-        <div style={{ width: 400 }}>
+        <div style={{ width: 400 }} onKeyPress={handleKeyPress}>
           <ReactSearchAutocomplete
             items={productsdata}
             onSearch={handleOnSearch}
