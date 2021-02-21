@@ -5,6 +5,20 @@ import Carousel from 'react-material-ui-carousel';
 import {makeStyles, Paper} from '@material-ui/core';
 import Fab from '@material-ui/core/Fab';
 import {Link} from 'react-router-dom';
+import { createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#5eaaa8',
+      light: '#7fe4e1'
+    },
+    secondary: {
+      main: '#7fe4e1',
+    },
+  },
+});
 
 const useStyles = makeStyles((theme) =>({
     fab: {
@@ -30,6 +44,7 @@ export default function ProductPage(props){
             </Carousel>
             <h2>{productsdata[0].price}</h2>
             <h3>Store:{productsdata[0].store}</h3>
+            <ThemeProvider theme={theme}>
             <Link to="/cart">
             <Fab color="primary" variant="extended" className={classes.fab} aria-label="add">
                 Buy Now
@@ -38,6 +53,7 @@ export default function ProductPage(props){
             <Fab color="primary" variant="extended" className={classes.fab} aria-label="add">
                 Add to Cart
             </Fab>
+            </ThemeProvider>
             <h4>Description:</h4>
             <p>{productsdata[0].desc}</p>
             <p>Store's Location:</p>

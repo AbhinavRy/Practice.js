@@ -29,6 +29,9 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
   },
+  AppBar: {
+    backgroundColor:'#5eaaa8',
+  },
   drawer: {
     [theme.breakpoints.up('sm')]: {
       width: drawerWidth,
@@ -91,6 +94,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    color: '#fff'
   },
   inputRoot: {
     color: 'inherit',
@@ -104,6 +108,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('md')]: {
       width: '20ch',
     },
+    color: '#fff'
   },
   sectionDesktop: {
     display: 'none',
@@ -234,7 +239,7 @@ export default function PrimarySearchAppBar(props) {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static">
+      <AppBar position="static" className={classes.AppBar}>
         <Toolbar>
           <IconButton
             edge="start"

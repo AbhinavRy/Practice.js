@@ -2,6 +2,17 @@ import React, { Component } from 'react'
 import {DropzoneDialog} from 'material-ui-dropzone'
 import Button from '@material-ui/core/Button';
 import styles from './EditPage.module.css'
+import { createMuiTheme } from '@material-ui/core/styles';
+import {ThemeProvider} from '@material-ui/styles'
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+        main: '#fff'
+    }
+  },
+});
+
 
 export default class DropzoneDialogExample extends Component {
     constructor(props) {
@@ -35,9 +46,10 @@ export default class DropzoneDialogExample extends Component {
     render() {
         return (
             <div>
-                <Button className={styles.AddImg} variant="contained" color="secondary" onClick={this.handleOpen.bind(this)}>
+                <ThemeProvider theme={theme}>
+                <Button className={styles.AddImg} variant="contained" color="primary" onClick={this.handleOpen.bind(this)}>
                   Add Image
-                </Button>
+                </Button></ThemeProvider>
                 <DropzoneDialog
                     open={this.state.open}
                     onSave={this.handleSave.bind(this)}

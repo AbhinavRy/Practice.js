@@ -11,6 +11,9 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+  AppBar: {
+    backgroundColor:'#5eaaa8',
+  },
   menuButton: {
     marginRight: theme.spacing(2),
   },
@@ -43,6 +46,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    color: '#fff'
   },
   inputRoot: {
     color: 'inherit',
@@ -53,6 +57,7 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
     transition: theme.transitions.create('width'),
     width: '100%',
+    color: '#fff',
     [theme.breakpoints.up('sm')]: {
       width: '12ch',
       '&:focus': {
@@ -67,7 +72,7 @@ export default function SearchAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" className={classes.AppBar}>
         <Toolbar>
           <Typography className={classes.title} variant="h6" noWrap>
             Material-UI

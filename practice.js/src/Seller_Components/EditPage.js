@@ -9,10 +9,19 @@ import InputAdornment from '@material-ui/core/InputAdornment';
 import DropZone from './DropZone'
 import Button from '@material-ui/core/Button';
 import ProductList from './ProductList'
+import {makeStyles} from '@material-ui/core/styles'
 
+const useStyles = makeStyles({
+    submit: {
+        color: '#fff',
+        backgroundColor: '#5eaaa8'
+    }
+})
 
 function EditPage() {
     const [amount, setAmount] = useState(0)
+    const classes = useStyles()
+
     function handleChange(event){
         setAmount(event.target.value)
     }
@@ -32,7 +41,7 @@ function EditPage() {
                     />
             </FormControl>
             <DropZone/>
-            <Button type="submit" variant="contained" color="primary">
+            <Button type="submit" variant="contained" color="primary" className={classes.submit}>
                   Submit
                 </Button>
             </form>

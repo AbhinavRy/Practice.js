@@ -8,6 +8,19 @@ import FilledInput from '@material-ui/core/OutlinedInput';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import DropZone from './DropZone'
 import Button from '@material-ui/core/Button';
+import { createMuiTheme } from '@material-ui/core/styles';
+import {ThemeProvider} from '@material-ui/styles'
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+        main: '#fff'
+    },
+    secondary: {
+        main: '#5eaaa8'
+    }
+  },
+});
 
 
 function AddProduct() {
@@ -30,10 +43,12 @@ function AddProduct() {
                     startAdornment={<InputAdornment position="start">₹</InputAdornment>}
                     />
             </FormControl>
+            <ThemeProvider theme={theme}>
             <DropZone/>
-            <Button type="submit" variant="contained" color="primary">
+            <Button type="submit" variant="contained" color="secondary">
                   Submit
                 </Button>
+                </ThemeProvider>
             </form>
         </div>
     )
