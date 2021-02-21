@@ -14,7 +14,7 @@ function SignIn() {
                         <FontAwesomeIcon icon={faShoppingBasket} className={styles.ChooseIcon}/>
                         <p className={styles.ChooseDesc}>Buyer</p>
                         <input className={`{styles.ChooseCheck} {syles.ChooseCheck1}`} type="radio" name="AccountType" value="ChooseCheck1" id="ChooseCheck1" checked/>
-                        <label htmlFor="ChooseCheck1">
+                        <label htmlFor="ChooseCheck1" className={styles.CheckSpan}>
                             <span>
                                 <FontAwesomeIcon icon={faCheck}/>
                             </span>
@@ -26,7 +26,7 @@ function SignIn() {
                         <FontAwesomeIcon icon={faStore} className={styles.ChooseIcon}/>
                         <p className={styles.ChooseDesc}>Seller</p>
                         <input className={`{styles.ChooseCheck} {syles.ChooseCheck2}`} type="radio" name="AccountType" value="ChooseCheck2" id="ChooseCheck2"/>
-                        <label htmlFor="ChooseCheck2">
+                        <label htmlFor="ChooseCheck2" className={styles.CheckSpan}>
                             <span>
                                 <FontAwesomeIcon icon={faCheck}/>
                             </span>
