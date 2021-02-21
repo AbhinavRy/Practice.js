@@ -2,9 +2,23 @@ import React from 'react';
 import SearchAppBar from './buyer_components/SecondaryHeader';
 import productsdata from './productsdata';
 import Carousel from 'react-material-ui-carousel';
-import {Paper} from '@material-ui/core';
+import {makeStyles, Paper} from '@material-ui/core';
+import Fab from '@material-ui/core/Fab';
+import {Link} from 'react-router-dom';
+
+const useStyles = makeStyles((theme) =>({
+    fab: {
+        margin: 0,
+        top: 'auto',
+        right: 20,
+        bottom: 0,
+        left: 'auto',
+        position: 'absolute',
+      },
+}));
 
 export default function ProductPage(props){
+    const classes =useStyles;
     return(
         <div>
             <SearchAppBar />
@@ -16,6 +30,14 @@ export default function ProductPage(props){
             </Carousel>
             <h2>{productsdata[0].price}</h2>
             <h3>Store:{productsdata[0].store}</h3>
+            <Link to="/cart">
+            <Fab color="primary" variant="extended" className={classes.fab} aria-label="add">
+                Buy Now
+            </Fab>
+            </Link>
+            <Fab color="primary" variant="extended" className={classes.fab} aria-label="add">
+                Add to Cart
+            </Fab>
             <h4>Description:</h4>
             <p>{productsdata[0].desc}</p>
             <p>Store's Location:</p>
@@ -32,7 +54,7 @@ const imgstyles = {
 
 function Item(props){
     return (
-        <Paper variant="oulined" >
+        <Paper>
             <img src={props.item} style={imgstyles}  alt=""/>
         </Paper>
     )
