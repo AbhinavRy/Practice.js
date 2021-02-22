@@ -13,12 +13,14 @@ import Cart from './buyer_components/Cart'
 import PaymentPage from './buyer_components/PaymentPage'
 import SearchBar from './buyer_components/SearchBar'
 import ChatBox from './buyer_components/ChatBot'
+import TermsConditions from './Seller_Components/TermsConditions'
 
 function Routes() {
     return(
         <Switch>
             <Route exact path="/" component={SignIn}/>
             <Route exact path="/signup" component={Signup}/>
+            <Route exact path="/tandc" component={TermsConditions}/>
             <Route exact path="/seller" component={SellerHome}/>
             <Route exact path="/seller/edit" component={EditPage}/>
             <Route exact path="/seller/add" component={AddProduct}/>

@@ -59,15 +59,19 @@ function BuyerSignup() {
                 <input type="password" className={styles.FormInp} placeholder="Enter Password" required/>
             </div>
             <div>
-                <p>Upload Pan Card: </p>
+                <p className={styles.UploadDoc}>Upload Pan Card: </p>
                 <DropZone/>
             </div>
             <div>
-                <p>Upload Aadhar Card: </p>
+                <p className={styles.UploadDoc}>Upload Aadhar Card: </p>
                 <DropZone/>
             </div>
             <div className={styles.LocationDesc}>Location of Store: <span>(Click on the map to detect current location)</span></div>
             <Map />
+            <div className={styles.TandC}>
+                <input type="checkbox"/>
+                <p>By signing up, you agree to our <Link to='/tandc'>Terms and Conditions</Link></p>
+            </div>
             <div className={styles.SubmitCont}>
                 <button className={styles.SigninBtn} type="Submit">Sign Up</button>
                 <p className={styles.Ortxt}>Or <Link to='/'>Sign In</Link></p>
