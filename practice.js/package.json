@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@capacitor/android": "^2.4.6",
+    "@capacitor/core": "^2.4.6",
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@fortawesome/react-fontawesome": "^0.1.14",
@@ -26,6 +28,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
     "react-search-autocomplete": "^5.0.3",
+    "react-simple-chatbot": "^0.6.1",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -51,5 +54,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@capacitor/cli": "2.4.6"
   }
 }

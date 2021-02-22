@@ -1,0 +1,7 @@
+{
+    "name": "practice.js",
+    "integrations": {
+      "capacitor": {}
+    },
+    "type": "react"
+}

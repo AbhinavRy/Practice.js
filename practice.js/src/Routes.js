@@ -12,6 +12,7 @@ import AddProduct from './Seller_Components/AddProduct'
 import Cart from './buyer_components/Cart'
 import PaymentPage from './buyer_components/PaymentPage'
 import SearchBar from './buyer_components/SearchBar'
+import ChatBox from './buyer_components/ChatBot'
 
 function Routes() {
     return(
@@ -27,6 +28,7 @@ function Routes() {
             <Route exact path="/productpage" component={ProductPage}/>
             <Route exact path="/cart" component={Cart}/>
             <Route exact path="/paymentpage" component={PaymentPage}/>
+            <Route exact path="/chatbot" component={ChatBox}/>
             <Route path="*" component={ErrorPage} />
         </Switch>
     )
