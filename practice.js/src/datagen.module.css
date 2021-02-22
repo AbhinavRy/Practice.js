@@ -1,0 +1,87 @@
+.Container{
+    max-width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: hidden;
+}
+.TabCtr{
+    display: flex;
+}
+.TabBtn{
+    color: #5eaaa8;
+    width: 50vw;
+    height: 3em;
+    font-weight: bold;
+    background: none;
+    border: none;
+    outline: none;
+}
+.TabBtnActv{
+    background: #d2f3fc;
+}
+.form{
+    display: grid;
+    grid-auto-flow: row;
+    gap: 0.8em;
+    padding: 30px;
+    width: 90vw;
+}
+.FullName{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 0.8em;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.FormInput{
+    border: 2px solid rgba(39, 102, 120, 0.5);
+    border-radius: 5px;
+    padding: 2px 5px;
+    min-width: 70px;
+    max-width: 100vw;
+}
+.FormIcon{
+    font-size: 20px;
+    color: #276678;
+    opacity: 0.2;
+    margin-top: 3px;
+}
+.FormInp{
+    border: none;
+    opacity: 0.7;
+    padding: 5px;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 2em;
+}
+.PhoneInp *{
+    outline: none;
+    border: none;
+}
+input[type="radio"]{
+    display: inline !important;
+}
+.WashCheck{
+
+    margin: 8px 10px 0 10px;
+}
+.UploadDoc{
+    color: #5eaaa8;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.SigninBtn{
+    background-color: #5eaaa8;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 7px;
+    margin: 5px;
+    border-radius: 8px;
+    width: 100px;
+}
