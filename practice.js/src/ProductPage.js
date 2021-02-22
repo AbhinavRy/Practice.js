@@ -7,7 +7,7 @@ import Fab from '@material-ui/core/Fab';
 import {Link} from 'react-router-dom';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
-import {makeStyles} from '@material-ui/styles'
+import {makeStyles} from '@material-ui/styles';
 
 const theme = createMuiTheme({
   palette: {
