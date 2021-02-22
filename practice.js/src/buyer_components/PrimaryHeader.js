@@ -201,7 +201,7 @@ export default function PrimarySearchAppBar(props) {
       <Link to='/cart'>
         <MenuItem>
         <IconButton aria-label="show new mails" color="inherit">
-          <Badge badgeContent={4} color="secondary">
+          <Badge badgeContent={0} color="secondary">
             <ShoppingCartIcon />
           </Badge>
         </IconButton>
@@ -209,7 +209,7 @@ export default function PrimarySearchAppBar(props) {
       </MenuItem></Link>
       <MenuItem>
         <IconButton aria-label="show items" color="inherit">
-          <Badge badgeContent={4} color="secondary">
+          <Badge badgeContent={0} color="secondary">
             <MailIcon />
           </Badge>
         </IconButton>
@@ -217,7 +217,7 @@ export default function PrimarySearchAppBar(props) {
       </MenuItem>
       <MenuItem>
         <IconButton aria-label="show new notifications" color="inherit">
-          <Badge badgeContent={11} color="secondary">
+          <Badge badgeContent={0} color="secondary">
             <NotificationsIcon />
           </Badge>
         </IconButton>
