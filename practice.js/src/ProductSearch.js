@@ -19,7 +19,7 @@ export default function ProductSearch(){
     return(
         <div>
             <SearchAppBar />
-            <p>Search Results for "{productsdata.name[0]}"</p>
+            <p>Search Results for "{productsdata[0].name}"</p>
             {productsdata.map(createProdPage)}
             <ChatbotIcon />
         </div>
