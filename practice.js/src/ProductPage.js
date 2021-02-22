@@ -40,7 +40,7 @@ export default function ProductPage(props){
                 }
             </Carousel>
             <h2>{productsdata[0].price}</h2>
-            <h3>Store:{productsdata[0].store}</h3>
+            <h3>Store: {productsdata[0].store}</h3>
             <ThemeProvider theme={theme}>
             <Link to="/cart">
             <Fab color="primary" variant="extended" aria-label="buynow">
