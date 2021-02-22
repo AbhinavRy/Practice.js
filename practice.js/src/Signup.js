@@ -4,6 +4,9 @@ import Map from './MapContain'
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 import {Link} from 'react-router-dom'
+import DropZone from './Seller_Components/DropZone'
+
+
 
 function BuyerSignup() {
     const [isBuyer, setIsBuyer] = useState(false)
@@ -29,8 +32,8 @@ function BuyerSignup() {
             <input type="password" className={styles.FormInp} placeholder="Enter Password" required/>
         </div>
         <div className={styles.SubmitCont}>
-            <button className={styles.SigninBtn} type="Submit">Sign In</button>
-            <p className={styles.Ortxt}>Or <a href="#Id">Sign Up</a></p>
+            <button className={styles.SigninBtn} type="Submit">Sign Up</button>
+            <p className={styles.Ortxt}>Or <Link to='/'>Sign In</Link></p>
         </div>
     </form>
     const seller =
@@ -54,6 +57,14 @@ function BuyerSignup() {
             </div>
             <div className={styles.FormInput}>
                 <input type="password" className={styles.FormInp} placeholder="Enter Password" required/>
+            </div>
+            <div>
+                <p>Upload Pan Card: </p>
+                <DropZone/>
+            </div>
+            <div>
+                <p>Upload Aadhar Card: </p>
+                <DropZone/>
             </div>
             <div className={styles.LocationDesc}>Location of Store: <span>(Click on the map to detect current location)</span></div>
             <Map />
