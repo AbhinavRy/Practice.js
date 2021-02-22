@@ -7,6 +7,7 @@ import Fab from '@material-ui/core/Fab';
 import {Link} from 'react-router-dom';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
+import {makeStyles} from '@material-ui/styles'
 
 const theme = createMuiTheme({
   palette: {
@@ -19,11 +20,18 @@ const theme = createMuiTheme({
     },
   },
 });
+const useStyles = makeStyles((theme) => ({
+    root: {
+        overflowX: 'hidden',
+    },
+}))
 
 
 export default function ProductPage(props){
+    let classes = useStyles()
+
     return(
-        <div>
+        <div className={classes.root}>
             <SearchAppBar />
             <p>{productsdata[0].name}</p>
             <Carousel autoPlay={false}>
