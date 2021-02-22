@@ -13,13 +13,13 @@ export default function BuyerHome(){
         <div>
             <PrimarySearchAppBar />
             <CarouselBanner items={items}/>
-            <ChatbotIcon />
-            <p>Recently Viewed:</p>
+            <h4>Recently Viewed:</h4>
             <PaperComponent items={productsdata} />
-            <p>Categories:</p>
+            <h4>Categories:</h4>
             <PaperComponent items={categories} />
-            <p>Stores Near You:</p>
+            <h4>Stores Near You:</h4>
             <CarouselBanner items={stores}/>
+            <ChatbotIcon />
         </div>
     );
 }

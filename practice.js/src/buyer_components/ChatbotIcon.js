@@ -22,7 +22,7 @@ export default function ChatbotIcon(){
         <div>
             <ThemeProvider theme={theme}>
             <Link to='/chatbot'>
-            <Fab color="primary" variant="extended" aria-label="chatbot" style={{position:"absolute",right:0,bottom:30}}>
+            <Fab color="primary" variant="extended" aria-label="chatbot" style={{position:"fixed",right:0,bottom:30}}>
                 <ChatBubbleOutlineIcon />ChatBot
             </Fab>
             </Link>
