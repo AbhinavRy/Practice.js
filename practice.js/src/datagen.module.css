@@ -62,9 +62,6 @@
     outline: none;
     border: none;
 }
-input[type="radio"]{
-    display: inline !important;
-}
 .WashCheck{
 
     margin: 8px 10px 0 10px;

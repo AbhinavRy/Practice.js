@@ -23,16 +23,14 @@ function DataGen() {
                 <input type="number" className={styles.FormInp} placeholder="Costing" required/>
             </div>
             <div className={styles.FormInput}>
-                <input type="number" className={styles.FormInp} placeholder="Size" required/>
+                <input type="text" className={styles.FormInp} placeholder="Size" required/>
             </div>
             <div className={styles.FormInput}>
-                <input type="number" className={styles.FormInp} placeholder="Weight" required/>
+                <input type="text" className={styles.FormInp} placeholder="Weight" required/>
             </div>
-            <div>
-                <p className={styles.UploadDoc}>Washable or not? :</p>
-                <input className={styles.WashCheck} type="radio" name="washable" id="washable"/>Yes
-                <input className={styles.WashCheck} type="radio" name="washable" id="washable"/>No
-                </div>
+            <div className={styles.FormInput}>
+                <input type="text" className={styles.FormInp} placeholder="Washable or not?" required/>
+            </div>
             <div>
                 <p className={styles.UploadDoc}>Upload Product Image: </p>
                 <DropZone/>
