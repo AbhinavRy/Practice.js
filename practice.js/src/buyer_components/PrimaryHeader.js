@@ -198,7 +198,7 @@ export default function PrimarySearchAppBar(props) {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <Link to='cart'>
+      <Link to='/cart'>
         <MenuItem>
         <IconButton aria-label="show new mails" color="inherit">
           <Badge badgeContent={4} color="secondary">
