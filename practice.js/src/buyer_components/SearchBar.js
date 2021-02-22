@@ -1,7 +1,7 @@
 import React from 'react';
 import productsdata from '../productsdata';
 import { ReactSearchAutocomplete } from 'react-search-autocomplete';
-import  { Link, useHistory } from 'react-router-dom';
+import  {useHistory } from 'react-router-dom';
 
 export default function SearchBar() {
   const handleOnSearch = (string, results) => {

@@ -48,7 +48,7 @@ export default class DropzoneDialogExample extends Component {
             <div>
                 <ThemeProvider theme={theme}>
                 <Button className={styles.AddImg} variant="contained" color="primary" onClick={this.handleOpen.bind(this)}>
-                  Add Image
+                  Upload
                 </Button></ThemeProvider>
                 <DropzoneDialog
                     open={this.state.open}
