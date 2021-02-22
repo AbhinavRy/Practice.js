@@ -19,7 +19,7 @@ export default function ProductSearch(){
     return(
         <div>
             <SearchAppBar />
-            <p>Search Results for "Samsung Galaxy M31"</p>
+            <p>Search Results for "{productsdata.name[0]}"</p>
             {productsdata.map(createProdPage)}
             <ChatbotIcon />
         </div>
