@@ -14,6 +14,7 @@ import PaymentPage from './buyer_components/PaymentPage'
 import SearchBar from './buyer_components/SearchBar'
 import ChatBox from './buyer_components/ChatBot'
 import TermsConditions from './Seller_Components/TermsConditions'
+import DataGen from './DataGen'
 
 function Routes() {
     return(
@@ -31,6 +32,7 @@ function Routes() {
             <Route exact path="/cart" component={Cart}/>
             <Route exact path="/paymentpage" component={PaymentPage}/>
             <Route exact path="/chatbot" component={ChatBox}/>
+            <Route exact path="/dataset" component={DataGen}/>
             <Route path="*" component={ErrorPage} />
         </Switch>
     )
