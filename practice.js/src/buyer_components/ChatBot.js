@@ -4,7 +4,7 @@ export default function ChatBox(){
     const steps = [
         {
           id: '0',
-          message: 'Welcome to its your boii chatbot!',
+          message: 'Welcome its your boii chatbot!',
           trigger: '1',
         },
         {
